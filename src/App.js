@@ -78,14 +78,14 @@ function App() {
       <div className="flex flex-row space-x-10 mt-10 pb-20">
         <div className="mx-20 h-80 w-5/12 rounded-xl mt-16 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-200">
         <p className="text-white font-extrabold ml-10 mt-7">English:</p>
-        <p className='text-white'>
-          {message}
+        {message}
+        <p className='text-white font-bold ml-10 mt-10'>
           {transcript}
         </p>
         </div>
         <div className="h-80 w-5/12 rounded-xl mt-16 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-200">
         <p className="text-white font-extrabold ml-10 mt-7">Hindi:</p>
-
+          
         </div>
       </div>
     </div>
