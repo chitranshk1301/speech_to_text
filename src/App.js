@@ -115,7 +115,9 @@ function App() {
           <button className='hover:bg-blue-700 text-white font-bold py-1 px-8 border border-blue-700 rounded mt-7 transition-all ease-in-out ml-8 ' onClick={e => translate()}>
             Translate to hindi
           </button>
+          <span className='text-white mt-7 ml-10'>
             {output}
+          </span>
         </div>
       </div>
     </div>
