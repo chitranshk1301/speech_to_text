@@ -64,6 +64,10 @@ function App() {
           <button onClick={SpeechRecognition.stopListening} className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded mt-10 transition-all ease-in-out'>
             Stop
           </button>
+
+          <button onClick={resetTranscript} className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded mt-10 transition-all ease-in-out'>
+            Reset
+          </button>
         </div>
       </div>
       <span>
