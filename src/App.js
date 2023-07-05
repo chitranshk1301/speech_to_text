@@ -13,27 +13,27 @@ function App() {
   const [output, setOutput] = useState('');
 
 
-  // const commands = [
-  //   {
-  //     command: 'reset',
-  //     callback: () => resetTranscript()
-  //   },
-  //   {
-  //     command: 'shut up',
-  //     callback: () => setMessage('I wasn\'t talking.')
-  //   },
-  //   {
-  //     command: 'Hello',
-  //     callback: () => setMessage('Hi there!')
-  //   },
-  // ]
+  const commands = [
+    {
+      command: 'reset',
+      callback: () => resetTranscript()
+    },
+    {
+      command: 'shut up',
+      callback: () => setMessage('I wasn\'t talking.')
+    },
+    {
+      command: 'Hello',
+      callback: () => setMessage('Hi there!')
+    },
+  ]
   const {
     transcript,
     interimTranscript,
     finalTranscript,
     resetTranscript,
     listening,
-  } = useSpeechRecognition();
+  } = useSpeechRecognition({ commands });
 
   const translate = () => {
     // curl -X POST "https://libretranslate.de/translate" -H  "accept: application/json" -H  "Content-Type: application/x-www-form-urlencoded" -d "q=hello&source=en&target=es&api_key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
