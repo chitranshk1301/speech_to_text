@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
-
-
 import './App.css';
 
 function App() {
@@ -98,23 +96,23 @@ function App() {
           </button>
         </div>
       </div>
-      <span className='text-white font-mono ml-20'>
+      <span className='text-white font-mono flex flex-row justify-center mt-16'>
         listening:
         {' '}
         {listening ? 'on' : 'off'}
       </span>
-      <div className="flex space-y-10 mt-10 pb-20 min-[320px]:flex-col">
-        <div className="ml-52 h-80 w-9/12 rounded-xl mt-16 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-200">
+      <div className="flex space-y-10 mt-10 pb-20 min-[320px]:flex-col items-center">
+        <div className="h-80 w-9/12 rounded-xl mt-16 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-200">
           <p className="text-white font-extrabold ml-10 mt-7">English:</p>
           {message}
           <p className='text-white font-bold ml-10 mt-10'>
             {transcript}
           </p>
         </div>
-        <div className="h-80 w-9/12 rounded-xl ml-52 mt-16 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-200">
-          <button className='hover:bg-blue-700 text-white font-bold py-1 px-8 border border-blue-700 rounded mt-7 transition-all ease-in-out ml-8 ' onClick={e => translate()}>
+          <button className='hover:bg-blue-700 w-40 text-white font-bold py-1 border border-blue-700 rounded mt-7 transition-all ease-in-out  md:ml-20 lg:ml-20' onClick={e => translate()}>
             Translate to hindi
           </button>
+        <div className="h-80 w-9/12 rounded-xl mt-16 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-200">
           <span className='text-white mt-7 ml-10'>
             {output}
           </span>
